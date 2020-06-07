@@ -1,12 +1,14 @@
 import React from 'react'
+import {useSelector , useDispatch} from 'react-redux'
 
-export default function LeafSearchRender(props) {
-
-    console.log(props.data)
+export default function AutoSearchRender() {
+    
+    const citiesNames = useSelector(state => state.filteredCitiesReducer)
+    
     return (
         
         <div>
-            { props.data && props.data.map((city) => { 
+            { citiesNames && citiesNames.map((city) => { 
                 return(
                  <datalist id = "autocomplete">
                     <option>{city.city}</option>
