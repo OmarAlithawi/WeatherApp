@@ -12,7 +12,8 @@ const Card = (props) =>  {
                         <h5 className="card-title">{props.weatherData.name}</h5>
                         <p className="card-text">{"Temprture is :"+" "+ Math.round((props.weatherData.main.temp) - 273 )+" " +"C"}</p>
                         <p className="card-text">{"Feels like :"+" "+ Math.round((props.weatherData.main.feels_like) - 273 )+" " +"C"}</p>
-                        <button onClick ={() => props.deleteCard(props.weatherData.name)} className="btn btn-primary">More Information</button>
+                        <button  className="btn btn-primary">More Information</button>
+                        <button onClick ={() => props.deleteCard(props.weatherData.name)} className="btn btn-primary BTN">  X</button>
                     </div>
                 </div>
             </>
