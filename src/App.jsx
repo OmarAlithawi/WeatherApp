@@ -4,7 +4,7 @@ import AutoSearchRender from './components/AutoSearchRender';
 import Fetch from './components/Fetch.jsx'
 import './App.css'
 
-import Card from './components/Card'
+import CardList from './components/CardList'
 
 export default function App() {
     
@@ -13,8 +13,8 @@ export default function App() {
         <div className="weatherApp">
            <Search />
             <AutoSearchRender />
+            <CardList />
             <Fetch />
-            <Card />
         </div>
     )
 }

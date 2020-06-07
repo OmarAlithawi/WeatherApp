@@ -11,8 +11,6 @@ const Fetch = () => {
     const image = await fetch(urlImage);
     let temperatureData = await temperature.json();
     let imageData = await image.json();
-    console.log(imageData);
-    console.log(temperatureData);
     dispatch(imagesData(imageData));
     dispatch(weatherData(temperatureData));
     

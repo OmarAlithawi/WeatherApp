@@ -12,6 +12,13 @@ export const weatherData = (data) =>{
     }
 }
 
+export const filteredWeatherData = (data) =>{
+    return{
+        type:"FILTERED_WEARTHER_DATA",
+        payload:data
+    }
+}
+
 export const imagesData = (data) =>{
     return{
         type:"IMAGES_DATA",
