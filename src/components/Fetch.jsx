@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react'
 import {useSelector , useDispatch} from 'react-redux'
 import {weatherData , cityData , imagesData, searchedCities} from '../actions'
+import {API_KEY_WEATHER , API_KEY_IMAGE} from '../const.js'
 const Fetch = () => {
 
   const dispatch = useDispatch();
@@ -23,8 +24,8 @@ const Fetch = () => {
   }
 
    const constructUrls = (city) =>{
-    const urlTemperature = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=3c52d516abbabc6e719907de6cd61344`
-    const urlImage = `https://pixabay.com/api/?key=16722547-67cf654ed55a7d7c4fad8def1&q=${city}&image_type=photo`
+    const urlTemperature = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY_WEATHER}`
+    const urlImage = `https://pixabay.com/api/?key=${API_KEY_IMAGE}&q=${city}&image_type=photo`
     fetchWeatherTemperature(urlTemperature  , urlImage)
   }
 
