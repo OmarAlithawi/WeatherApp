@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import React from "react";
+import PropTypes from 'prop-types';
 
 const Card = (props) => {
   // weather and img data
@@ -41,5 +41,15 @@ const Card = (props) => {
     </>
   );
 };
+
+
+Card.propTypes = {
+  // You can declare that a prop is a specific JS primitive. By default, these
+  // are all optional.
+  img: PropTypes.string,
+  weatherData: PropTypes.object,
+  deleteCard : PropTypes.func
+  
+}
 
 export default Card;

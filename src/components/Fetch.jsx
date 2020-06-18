@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { weatherData, cityData, imagesData, searchedCities } from "../actions";
+import { weatherData, cityData, imagesData } from "../actions";
 import { API_KEY_WEATHER, API_KEY_IMAGE } from "../const.js";
 const Fetch = () => {
   const dispatch = useDispatch();

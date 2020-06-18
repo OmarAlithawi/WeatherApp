@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import Card from "./Card";
 import { useSelector, useDispatch } from "react-redux";
-import { filteredWeatherData, filteredCities } from "../actions";
+import { filteredWeatherData } from "../actions";
 
 export default function CardList() {
   const dispatch = useDispatch();
@@ -12,10 +12,10 @@ export default function CardList() {
     dispatch(filteredWeatherData(name));
   };
 
-  const renderCards = (id) => {
+  const renderCards = () => {
     return weatherData.map((data, index) => {
       return (
-        <Card weatherData={data} img={img[index]} deleteCard={deleteCard} />
+        <Card key = {index} weatherData={data} img={img[index]} deleteCard={deleteCard} />
       );
     });
   };

@@ -18,7 +18,7 @@ const Search = () => {
   };
 
   const displayAutoSearch = (e) => {
-    const matchedCities = handleAutoSearch(e.target.value, cities);
+    return handleAutoSearch(e.target.value, cities);
   };
 
   const handleSubmit = (e) => {
@@ -32,7 +32,7 @@ const Search = () => {
       <div className="container">
         <form onSubmit={(event) => handleSubmit(event)}>
           <div className="form-group">
-            <h1 for="formGroupExampleInput">Choose a city</h1>
+            <h1>Choose a city</h1>
             <input
               type="text"
               value={searchTerm}
