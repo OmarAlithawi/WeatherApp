@@ -3,7 +3,7 @@ import {useSelector , useDispatch} from 'react-redux'
 
 export default function AutoSearchRender() {
     
-    const citiesNames = useSelector(state => state.filteredCitiesReducer)
+    const citiesNames = useSelector(state => state.searchedCitiesDataReducer)
     
     return (
         

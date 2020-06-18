@@ -1,10 +1,10 @@
-const inputValueReduer = (state ="" , action) => {
+const filteredCitiesReducer = (state = [] , action) =>{
     switch(action.type){
-        case "INPUT_VALUE" :
+        case "FILTERED_CITIES" :
             return state = action.payload;
         default :
             return state;
     }
 }
 
-export default inputValueReduer;
+export default filteredCitiesReducer;

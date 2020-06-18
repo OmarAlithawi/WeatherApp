@@ -41,7 +41,7 @@ export const inputValue = (data) =>{
 }
 
 
-export const filteredCities = (data) =>{
+export const filteredCitiesData = (data) =>{
     return{
         type:"FILTERED_CITIES",
         payload:data
