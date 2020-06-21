@@ -33,8 +33,10 @@ const Fetch = () => {
     fetchCitiesNames(urlCities);
   };
 
+  
   useEffect(() => {
     constructCitiesUrl();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return <div>{event && constructUrls(event)}</div>;

@@ -10,7 +10,7 @@ const Card = (props) => {
         <img
           className="card-img-top"
           src={props.img.hits[0].largeImageURL}
-          alt="Card image cap"
+          alt="Card cap"
         />
         <div className="card-body">
           <h5 className="card-title">{props.weatherData.name}</h5>
